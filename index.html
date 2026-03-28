@@ -1,14 +1,322 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>주원테크 - 가로등주 전문 제조업체</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+
+  <!-- 헤더 -->
+  <header id="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">💡</span>
+        <span class="logo-text">주원테크</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">회사소개</a></li>
+          <li><a href="#products">제품소개</a></li>
+          <li><a href="#features">특장점</a></li>
+          <li><a href="#contact">문의하기</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="메뉴">&#9776;</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#about" onclick="closeMobileNav()">회사소개</a></li>
+        <li><a href="#products" onclick="closeMobileNav()">제품소개</a></li>
+        <li><a href="#features" onclick="closeMobileNav()">특장점</a></li>
+        <li><a href="#contact" onclick="closeMobileNav()">문의하기</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 히어로 섹션 -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <p class="hero-sub">가로등주 전문 제조업체</p>
+      <h1 class="hero-title">도시의 빛을 밝히는<br>주원테크</h1>
+      <p class="hero-desc">20년 전통의 기술력으로 고품질 가로등주를 제조합니다.<br>안전하고 내구성 있는 제품으로 도시 인프라를 지원합니다.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">제품 보기</a>
+        <a href="#contact" class="btn btn-outline">문의하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 숫자로 보는 주원테크 -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">20<span>년</span></div>
+        <div class="stat-label">업력</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50,000<span>+</span></div>
+        <div class="stat-label">누적 납품 수량</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">200<span>+</span></div>
+        <div class="stat-label">거래 지자체</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100<span>%</span></div>
+        <div class="stat-label">국내 생산</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 회사소개 -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">ABOUT US</p>
+        <h2 class="section-title">회사소개</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>주원테크는 2004년 창업 이래 가로등주, 보안등주, 공원등주 등 다양한 조명 지주 제품을 제조·공급해온 전문 기업입니다.</p>
+          <p>엄격한 품질 관리와 숙련된 기술진을 바탕으로 전국 지방자치단체, 공공기관, 민간 건설사에 납품하고 있습니다.</p>
+          <p>KS 인증 취득과 지속적인 R&D 투자로 더 안전하고 환경친화적인 제품 개발에 매진하고 있습니다.</p>
+          <ul class="about-list">
+            <li>✅ KS D 3567 인증 취득</li>
+            <li>✅ ISO 9001 품질경영시스템 인증</li>
+            <li>✅ 조달청 우수조달제품 등록</li>
+            <li>✅ 중소기업 기술혁신대상 수상</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <div class="image-placeholder">
+            <div class="pole-illustration">
+              <div class="pole-arm"></div>
+              <div class="pole-body"></div>
+              <div class="pole-base"></div>
+              <div class="pole-light"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 제품소개 -->
+  <section class="products section section-gray" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">PRODUCTS</p>
+        <h2 class="section-title">제품소개</h2>
+        <p class="section-desc">다양한 환경과 용도에 맞는 최적의 가로등주를 제공합니다.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">🏙️</div>
+          <h3>도로용 가로등주</h3>
+          <p>일반 도로 및 간선도로에 적합한 표준형 가로등주. 높이 8m~12m, 다양한 형태 선택 가능.</p>
+          <ul class="product-specs">
+            <li>재질: 고강도 강관</li>
+            <li>표면처리: 용융아연도금 + 분체도장</li>
+            <li>규격: H8m ~ H12m</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🌿</div>
+          <h3>공원·보행로용 등주</h3>
+          <p>공원, 산책로, 보행자 도로에 어울리는 디자인 등주. 미관을 고려한 다양한 디자인 제공.</p>
+          <ul class="product-specs">
+            <li>재질: 알루미늄 합금 / 강관</li>
+            <li>표면처리: 아노다이징 / 분체도장</li>
+            <li>규격: H4m ~ H8m</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🛣️</div>
+          <h3>고속도로용 고주</h3>
+          <p>고속도로·교량 등 특수 구간용 고강도 등주. 내풍압·내진 설계 적용.</p>
+          <ul class="product-specs">
+            <li>재질: 고장력 강관</li>
+            <li>표면처리: 용융아연도금</li>
+            <li>규격: H10m ~ H20m</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">⚡</div>
+          <h3>태양광 일체형 등주</h3>
+          <p>태양광 패널과 LED 조명이 일체화된 친환경 스마트 등주. 별도 전력 인프라 불필요.</p>
+          <ul class="product-specs">
+            <li>재질: 알루미늄 합금</li>
+            <li>태양광: 80W ~ 200W</li>
+            <li>배터리: 리튬인산철(LFP)</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🏛️</div>
+          <h3>장식형 등주</h3>
+          <p>도심 미관거리, 광장, 관광지에 어울리는 고급 장식형 등주. 주문 제작 가능.</p>
+          <ul class="product-specs">
+            <li>재질: 주철 / 알루미늄</li>
+            <li>표면처리: 분체도장 (다색 선택)</li>
+            <li>규격: H4m ~ H8m (맞춤 제작)</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🔧</div>
+          <h3>맞춤 제작 등주</h3>
+          <p>고객 요구에 맞춘 특수 규격 및 디자인 등주 제작. 도면 협의 후 제작 가능.</p>
+          <ul class="product-specs">
+            <li>규격: 고객 요청 사양</li>
+            <li>디자인: 3D 설계 후 제작</li>
+            <li>납기: 협의 후 결정</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 특장점 -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">WHY CHOOSE US</p>
+        <h2 class="section-title">주원테크를 선택하는 이유</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🏆</div>
+          <h3>검증된 품질</h3>
+          <p>KS 인증 및 ISO 9001 인증을 통해 엄격한 품질 기준을 준수합니다. 출하 전 전수검사로 불량 제로에 도전합니다.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔬</div>
+          <h3>자체 기술 개발</h3>
+          <p>전담 R&D팀을 운영하여 내부식성, 내풍압, 경량화 등 지속적인 기술 혁신을 이루고 있습니다.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🚚</div>
+          <h3>빠른 납기</h3>
+          <p>대규모 생산 설비와 재고 관리 시스템을 통해 신속하고 정확한 납기를 보장합니다.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💰</div>
+          <h3>합리적인 가격</h3>
+          <p>직접 제조·판매 방식으로 유통 단계를 줄여 경쟁력 있는 가격을 제공합니다.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🛠️</div>
+          <h3>A/S 지원</h3>
+          <p>납품 후에도 전담 A/S팀이 신속하게 대응합니다. 전국 서비스 네트워크를 보유하고 있습니다.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌱</div>
+          <h3>친환경 생산</h3>
+          <p>무독성 도료 사용, 폐자재 재활용 등 환경을 고려한 지속가능한 생산 방식을 실천합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의하기 -->
+  <section class="contact section section-dark" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">CONTACT US</p>
+        <h2 class="section-title" style="color:#fff;">문의하기</h2>
+        <p class="section-desc" style="color:#aaa;">궁금하신 사항은 언제든지 문의해 주세요.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>주소</strong>
+              <p>경기도 OO시 OO구 OO로 123</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>전화</strong>
+              <p>031-000-0000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📠</div>
+            <div>
+              <strong>팩스</strong>
+              <p>031-000-0001</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>이메일</strong>
+              <p>info@juwontech.co.kr</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>운영시간</strong>
+              <p>평일 09:00 ~ 18:00 (점심 12:00~13:00)</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">이름 / 회사명</label>
+            <input type="text" id="name" placeholder="홍길동 / (주)OO건설" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" placeholder="010-0000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" placeholder="example@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="product">관심 제품</label>
+            <select id="product">
+              <option value="">-- 선택하세요 --</option>
+              <option>도로용 가로등주</option>
+              <option>공원·보행로용 등주</option>
+              <option>고속도로용 고주</option>
+              <option>태양광 일체형 등주</option>
+              <option>장식형 등주</option>
+              <option>맞춤 제작 등주</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">문의 내용</label>
+            <textarea id="message" rows="4" placeholder="문의하실 내용을 입력해 주세요." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">문의 보내기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">💡</span>
+        <span class="logo-text">주원테크</span>
+        <p>도시의 빛을 밝히는 가로등주 전문 제조업체</p>
+      </div>
+      <div class="footer-info">
+        <p>대표이사: 홍길동 | 사업자등록번호: 000-00-00000</p>
+        <p>주소: 경기도 OO시 OO구 OO로 123 | TEL: 031-000-0000</p>
+        <p>© 2024 주원테크. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
