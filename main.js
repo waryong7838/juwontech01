@@ -1,3 +1,21 @@
+// 다크모드
+const darkToggle = document.getElementById('darkToggle');
+const body = document.body;
+
+// 저장된 설정 또는 시스템 설정 적용
+if (localStorage.getItem('theme') === 'dark' ||
+    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  body.classList.add('dark');
+  darkToggle.textContent = '☀️';
+}
+
+darkToggle.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  const isDark = body.classList.contains('dark');
+  darkToggle.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
 // 모바일 네비게이션
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');

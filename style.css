@@ -13,7 +13,41 @@
   --border: #e0e6ef;
   --radius: 10px;
   --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --body-bg: #ffffff;
+  --stats-bg: #ffffff;
+  --feature-hover: #f6f8fb;
 }
+
+/* ===== 다크모드 ===== */
+body.dark {
+  --text: #e2e8f0;
+  --text-light: #94a3b8;
+  --bg-gray: #1e2535;
+  --white: #1e2535;
+  --border: #2d3748;
+  --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  --card-bg: #1e2535;
+  --header-bg: #141926;
+  --body-bg: #141926;
+  --stats-bg: #141926;
+  --feature-hover: #252f42;
+}
+
+body.dark { background: var(--body-bg); color: var(--text); }
+body.dark #header { background: var(--header-bg); border-color: var(--border); }
+body.dark .mobile-nav { background: var(--header-bg); border-color: var(--border); }
+body.dark .stats { background: var(--stats-bg); border-color: var(--border); }
+body.dark .section-gray { background: var(--bg-gray); }
+body.dark .section-title { color: var(--text); }
+body.dark .product-card { background: var(--card-bg); border-color: var(--border); }
+body.dark .product-card h3 { color: var(--text); }
+body.dark .feature-item:hover { background: var(--feature-hover); }
+body.dark .image-placeholder { background: linear-gradient(135deg, #1e3a5f, #1a3a6e); }
+body.dark .footer { background: #0d1017; }
+body.dark .footer-brand p { color: #555; }
+body.dark .dark-toggle { color: var(--text); }
 
 html { scroll-behavior: smooth; }
 
@@ -133,6 +167,18 @@ img { max-width: 100%; }
 }
 .nav-list a:hover { color: var(--primary); }
 .nav-list a:hover::after { width: 100%; }
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.dark-toggle:hover { background: var(--bg-gray); }
 
 .hamburger {
   display: none;
