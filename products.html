@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 제품 | 주원테크</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="products.js" defer></script>
+</head>
+<body class="bg-slate-50">
+
+    <div class="bg-slate-900 text-white text-xs py-2 hidden md:block">
+        <div class="container mx-auto px-6 flex justify-between">
+            <span><i class="fas fa-check-circle text-blue-400 mr-2"></i>조달청 우수제품 등록 기업</span>
+            <div class="space-x-4">
+                <span><i class="fas fa-phone mr-1"></i> 055-332-9753</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-lightbulb text-blue-600 text-3xl"></i>
+                <span class="text-2xl font-black text-slate-800 tracking-tighter">주원테크</span>
+            </a>
+            <a href="index.html" class="flex items-center space-x-2 text-slate-600 font-bold hover:text-blue-600 transition">
+                <i class="fas fa-arrow-left mr-1"></i>
+                <span>홈으로 돌아가기</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">전체 제품 목록</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-4"></div>
+                <p class="text-slate-500">주원테크의 모든 가로등주 제품을 확인하세요.</p>
+            </div>
+
+            <!-- 카테고리 필터 -->
+            <div id="category-filters" class="flex flex-wrap justify-center gap-2 mb-12">
+            </div>
+
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-10">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p class="font-bold text-white mb-1">주원테크</p>
+            <p>경상남도 김해시 대동면 대동산단8로 79-12, 에이동</p>
+            <p class="mt-1">Tel: 055-332-9753 | Fax: 055-331-9753</p>
+            <p class="mt-4 text-xs text-slate-600">&copy; 2025 Juwon Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
